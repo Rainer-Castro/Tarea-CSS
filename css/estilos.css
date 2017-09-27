@@ -1,9 +1,31 @@
-body {
-	margin: 20px;
-	font-family: 'Dancing Script', cursive;
+@media (max-width: 900px) {
+	#Contenido {
+		width: 100%;
+	}
+}
+
+@media (min-width: 901px) {
+	#Contenido {
+		width: 900px;
+	}
 }
 
 #Contenido {
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+body {
+	margin: 20px;
+	font-family: 'Dancing Script', cursive;
+	background-color: black;
+}
+
+img {
+	box-shadow: 2px 2px 0 #02010a;
+}
+
+#Contenido-Principal {
 	display: flex;
 	flex-direction: column;
 }
@@ -11,15 +33,15 @@ body {
 #Cabecera {
 	background-color: #5b7989;
 	border-radius: 10px 10px 0px 0px;
+	display: flex;
+	flex-direction: row;
 }
 
-#Galeria {
-	background-color: #82c3a6;
-}
-
-#disponible {
-	background-color: #d5c75f;
-	border-radius: 1px;
+#Cabecera > div {
+	padding: 10px;
+	margin: 5px;
+	width: 50%;
+	vertical-align: middle;
 }
 
 #Titulo > h1 {
@@ -34,59 +56,99 @@ body {
 #Links {
 	font-size: 1.5em;
 	display: flex;
-  	align-items: center;
+	flex-direction: row;
+	align-items: center;
+}
+
+#Links > div {
+	width: 20%;
+}
+
+#Links a {
+	color: white;
+	text-decoration: none;
+}
+
+#Links a:active {
+	text-decoration: none;
+}
+
+#Imagen-Home {
+	background-color: #82c3a6;
+	display: flex;
+	flex-direction: row;
+}
+
+#Imagen-Home > div {
+	text-align: center;
+	padding: 30px;
+	margin: 10px;
+	width: 100%;
+}
+
+#Imagen-Home-2 {
+	background-color: #d5c75f;
+	border-radius: 1px;
+	display: flex;
+	flex-direction: row;
+}
+
+#Imagen-Home-2 > div {
+	text-align: center;
+	padding: 30px;
+	width: 50%;
+}
+
+#Rotar:hover {
+	-webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 0 #82c3a6;
+    border-radius: 2px;
+}
+
+#Mover:hover {
+	transform: translate(20px,-5px);
+	box-shadow: 2px 2px 0 #82c3a6;
+	border-radius: 2px;
 }
 
 #Contenedor-Footer {
 	font-size: 1.2em;
 	background-color: #C6d5c5;
 	border-radius: 0px 0px 10px 10px;
-}
-
-.Link {
-	display: inline-block;
-}
-
-.contenedor {
 	display: flex;
 	flex-direction: row;
 }
 
-#Cabecera .contenedor > div {
-	padding: 10px;
-	margin: 10px;
-	width: 50%;
-	vertical-align: middle;
-}
-
-#Cabecera .contenedor #Links {
-
-	text-align: right;
-	vertical-align: middle;
-}
-
-#destacados .contenedor #Titulo {
+#Contenedor-Footer > div {
 	text-align: left;
-	vertical-align: middle;
-	
+	padding: 30px;
+	width: 50%;
 }
 
-#Galeria .contenedor > div {
+#Galeria {
+	background-color: #82c3a6;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#Galeria > div {
 	text-align: center;
 	padding: 10px;
-	margin: 10px;
-	width: 100%;
+	margin: 5px;
+	width: 30%;
 }
 
-#disponible .contenedor > div {
-	text-align: center;
-	padding: 10px;
-	width: 50%;
+#Galeria > div:nth-child(even) {
+	-webkit-filter: grayscale(100%); 
+	filter: grayscale(100%); 
+} 
+
+.Efecto-Blur {
+	filter: blur(10px); 
 }
 
-#Contenedor-Footer .contenedor > div {
-	text-align: left;
-	padding: 10px;
-	width: 50%;
+.Efecto-Sepia {
+	filter: sepia(90%); 
 }
-
