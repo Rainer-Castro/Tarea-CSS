@@ -1,19 +1,97 @@
-@media (max-width: 900px) {
+/*------TAMAÑO MOVIL------*/
+@media all and (max-width: 900px) {
 	#Contenido {
 		width: 100%;
 	}
-}
+	#Titulo {
+		text-align: center;
+		width: 100%;
+	}
+	#Links {
+		width: 100%;
+	}
+	#Links div {
+		text-align: center;
+		width: 33.33%;
+	}
+	#Imagen-Home-2 > div {
+		text-align: center;
+		padding: 30px;
+		width: 100%;
+	}
+	#Paisaje {
+		text-align: center;
+		width: 100%;
+	}
+	#Retrato {
+		width: 100%;
+	}
 
-@media (min-width: 901px) {
-	#Contenido {
-		width: 900px;
+	#Galeria > div {
+		text-align: center;
+		padding: 30px;
+		width: 100%;
+	}
+
+	#Contenedor-Footer > div {
+		text-align: left;
+		padding: 5px 40px 5px 40px;
+		width: 100%;
+		margin-left: auto;
+  		margin-right: auto;
 	}
 }
 
-#Contenido {
-	margin-left: auto;
-  	margin-right: auto;
+/*------TAMAÑO ESCRITORIO------*/
+@media (min-width: 900px) {
+	#Contenido {
+		width: 900px;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+	#Titulo {
+		
+		width: 47%;
+	}
+	#Links {
+		width: 47%;
+	}
+	#Links > div {
+		text-align: right;
+		width: 33.33%;
+	}
+	#Imagen-Home-2 > div {
+		padding: 10px;
+		width: 47%;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+	#Galeria > div {
+		text-align: center;
+		padding: 10px;
+		width: 30%;
+		margin-left: auto;
+  		margin-right: auto;
+	}
+	#Contenedor-Footer > div {
+		text-align: left;
+		width: 25%;
+	}
 }
+
+/*------ANIMACION------*/
+@keyframes Animacion-Cabecera {
+	0% {
+		margin-top: 150%;
+	}
+	60% {
+		margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
+
 
 body {
 	margin: 20px;
@@ -34,14 +112,13 @@ img {
 	background-color: #5b7989;
 	border-radius: 10px 10px 0px 0px;
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
+	animation-name: Animacion-Cabecera;
+	animation-duration: 1s;
 }
 
 #Cabecera > div {
 	padding: 10px;
-	margin: 5px;
-	width: 50%;
-	vertical-align: middle;
 }
 
 #Titulo > h1 {
@@ -56,27 +133,23 @@ img {
 #Links {
 	font-size: 1.5em;
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	align-items: center;
-}
-
-#Links > div {
-	width: 20%;
 }
 
 #Links a {
 	color: white;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
-#Links a:active {
+#Links .Actual {
 	text-decoration: none;
 }
 
 #Imagen-Home {
 	background-color: #82c3a6;
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 }
 
 #Imagen-Home > div {
@@ -90,13 +163,9 @@ img {
 	background-color: #d5c75f;
 	border-radius: 1px;
 	display: flex;
-	flex-direction: row;
-}
-
-#Imagen-Home-2 > div {
+	flex-flow: row wrap;
 	text-align: center;
-	padding: 30px;
-	width: 50%;
+	font-size: 1.5em;
 }
 
 #Rotar:hover {
@@ -117,13 +186,8 @@ img {
 	background-color: #C6d5c5;
 	border-radius: 0px 0px 10px 10px;
 	display: flex;
-	flex-direction: row;
-}
-
-#Contenedor-Footer > div {
-	text-align: left;
-	padding: 30px;
-	width: 50%;
+	flex-flow: row wrap;
+	padding: 20px;
 }
 
 #Galeria {
@@ -131,13 +195,6 @@ img {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-}
-
-#Galeria > div {
-	text-align: center;
-	padding: 10px;
-	margin: 5px;
-	width: 30%;
 }
 
 #Galeria > div:nth-child(even) {
